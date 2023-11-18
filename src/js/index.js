@@ -1,4 +1,4 @@
-import simpleLightbox from 'simplelightbox';
+import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 import { getPhoto } from './photo-api';
@@ -22,6 +22,7 @@ async function getSerchPhoto(e) {
   if (!search) return;
   const data = await getPhoto();
   renderMarkup(data);
+  lightbox.refresh();
   const totalImages = data.totalHits;
   Notiflix.Notify.success(`Hooray! We found ${totalImages} images.`);
   totalPage = Math.ceil(data.totalHits / 10);
@@ -33,7 +34,8 @@ async function getMoreInform() {
   updateBtnSt();
   const data = await getPhoto();
   const markup = imagesTemplate(data.hits);
-  return refs.galleryEl.insertAdjacentHTML('beforeend', markup);
+  refs.galleryEl.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
 function updateBtnSt() {
@@ -45,6 +47,6 @@ function updateBtnSt() {
   refs.loadBtnEl.classList.remove('is-hidden');
 }
 
-var gallery = $('.js-gallery .photo-card').simpleLightbox();
-
-gallery.refresh();
+const lightbox = new SimpleLightbox('.js-gallery .gallery__link', {
+  captionDelay: 250,
+});
