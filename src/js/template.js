@@ -12,7 +12,7 @@ function imageTemplate({
   downloads,
 }) {
   return `<div class="photo-card">
-    <a class="gallery__link" href="${webformatURL}"><img src="${largeImageURL}" alt="${tags}" loading="lazy" /></a>
+    <a class="gallery__link" href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
     <div class="info">
       <p class="info-item">
         <b>Likes:${likes}</b>

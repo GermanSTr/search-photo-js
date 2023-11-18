@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="./common.css" />
   </head>
   <body>
-    <form class="search-form js-search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit js-submit">Search</button>
-    </form>
+    <div class="form">
+      <form class="search-form js-search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit js-submit">Search</button>
+      </form>
+    </div>
     <div class="gallery js-gallery"></div>
     <div class="target js-target"></div>
-    <div>
-      <p class="message js-message"></p>
+    <div class="message js-message">
       <button type="button" class="load-more js-load-more">Load more</button>
     </div>
 

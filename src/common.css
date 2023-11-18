@@ -1,9 +1,34 @@
 .is-hidden {
   display: none;
 }
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(35, 21, 228, 0.798);
+}
+.search-form input[type='text'] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 8px;
+}
 
-.target {
-  width: 50px;
-  height: 50px;
-  background-color: red;
+.search-form button[type='submit'] {
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-form button[type='submit']:hover {
+  background-color: #07305c;
 }
