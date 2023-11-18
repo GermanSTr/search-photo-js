@@ -25,7 +25,7 @@ async function getSerchPhoto(e) {
   lightbox.refresh();
   const totalImages = data.totalHits;
   Notiflix.Notify.success(`Hooray! We found ${totalImages} images.`);
-  totalPage = Math.ceil(data.totalHits / 10);
+  totalPage = Math.ceil(data.totalHits / 40);
   updateBtnSt();
 }
 
@@ -47,6 +47,6 @@ function updateBtnSt() {
   refs.loadBtnEl.classList.remove('is-hidden');
 }
 
-const lightbox = new SimpleLightbox('.js-gallery .gallery__link', {
+const lightbox = new SimpleLightbox('.gallery__link', {
   captionDelay: 250,
 });
