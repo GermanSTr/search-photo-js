@@ -17,7 +17,7 @@ refs.loadBtnEl.addEventListener('click', getMoreInform);
 
 async function getSerchPhoto(e) {
   e.preventDefault();
-  search = e.target.elements.searchQuery.value;
+  search = e.target.elements.search.value;
   page = 1;
   if (!search) return;
   const data = await getPhoto();

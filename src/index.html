@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
     <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./search.css" />
   </head>
   <body>
-    <div class="form">
+    <!-- <div class="form">
       <form class="search-form js-search-form" id="search-form">
         <input
           type="text"
@@ -16,6 +17,14 @@
           placeholder="Search images..."
         />
         <button class="js-submit" type="submit">Search</button>
+      </form>
+    </div> -->
+    <div class="form">
+      <form action="" class="search-bar" id="search-form">
+        <input type="search" name="search" pattern=".*\S.*" required />
+        <button class="search-btn" type="submit">
+          <span>Search</span>
+        </button>
       </form>
     </div>
     <div class="gallery-item js-gallery"></div>
