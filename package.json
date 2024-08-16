@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://GermanSTr.github.io/goit-js-hw-11",
+  "homepage": "https://GermanSTr.github.io/search-photo-js", 
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
+    "build": "parcel build src/*.html --public-url /search-photo-js/"
   },
   "repository": {
     "type": "git",
